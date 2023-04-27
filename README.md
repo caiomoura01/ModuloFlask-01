@@ -1,1 +1,1 @@
-Projeto feito usadno o framework Flask.
+Projeto feito usando o framework Flask.
