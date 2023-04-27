@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block header %}
+
+<div class="slider">
+    <ul class="slides">
+        <li style="height: 100vh;">
+            <img style="filter: grayscale(30%);" src="{{ url_for ('static', filename = 'img/img1.jpeg')}}">
+            <div class="blue-grey lighten-5 card-panel caption left-align" style="margin-top: 0px; border-radius: 10px; width: 350px;">
+                <h3 style="display: inline; font-weight: bold;" class="grey-text text-darken-3">Booksboxd</h3>
+                <h5 style="display: block;" class="grey-text text-darken-3">Seus livros, do seu jeito, <br> a qualquer momento.</h5>
+            </div>
+        </li>
+        <li style="height: 100vh;">
+            <img style="filter: grayscale(50%);" src="{{url_for ('static', filename = 'img/img2.jpeg')}}">
+            <div class="caption right-align" style="margin-top: 110px"></div>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

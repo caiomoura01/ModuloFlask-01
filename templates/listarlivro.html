@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Listar novo livro{% endblock %}
+
+{% block content %}
+
+<center><h2 style="font-weight: bold;">Adicionar Livro</h2></center>
+<div class="section"></div> <!-- padding no topo da página -->
+<div class="container">
+    <div class="row">
+        <form action="{{url_for('listarlivro')}}" method="POST" class="col s12">
+            <fieldset>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="nome" type="text" class="validate" name="nome" required>
+                        <label for="nome">Nome do Livro</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="autor" type="text" class="validate" name="autor" required>
+                        <label for="autor">Autor</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="genero" type="text" class="validate" name="genero" required>
+                        <label for="genero">Gênero</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="npaginas" type="number" class="validate" name="npaginas" required>
+                        <label for="npaginas">Número de Páginas</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="editora" type="text" class="validate" name="editora" required>
+                        <label for="editora">Editora</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="ano" type="number" class="validate" name="ano" required>
+                        <label for="ano">Ano de Publicação</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea style="margin-top: 5px"; id="descricao" class="validate" name="descricao" maxlength="300" required> </textarea>
+                        <label for="descricao">Descrição (Máx. 300 caracteres)</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="avaliacao" max="5" min="0" type="number" class="validate" name="avaliacao" required>
+                        <label class="active" for="avaliacao">Avaliação</label>
+                    </div>
+                </div>
+
+
+                <button class="btn grey darken-3 white-text" type="submit" name="action">Adicionar
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </fieldset>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

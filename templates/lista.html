@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Lista{% endblock %}
+
+{% block content %}
+<div class="container">
+    <center><h2 style="font-weight: bold;">Lista de Livros</h2></center>
+    <a href="{{url_for('listarlivro')}}" class="btn grey darken-3 white-text">Adicionar Livro</a>
+    <br><br>
+    <table class="striped bordered">
+        <thead class="grey darken-3 white-text">
+            <tr>
+                <th>Nome</th>
+                <th>Autor</th>
+                <th>Gênero</th>
+                <th>Nº de Páginas</th>
+                <th>Editora</th>
+                <th>Ano de Publicação</th>
+                <th>Descrição</th>
+                <th>Avaliação</th>
+                <th class="center"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for livro in livros %}
+            <tr>
+                <td>{{ livro.nome }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.genero }}</td>
+                <td>{{ livro.npaginas }}</td>
+                <td>{{ livro.editora }}</td>
+                <td>{{ livro.ano }}</td>
+                <td>{{ livro.descricao }}</td>
+                <td class="center">{{ livro.avaliacao }}</td>
+                <td>
+                    <a href="{{livro.id}}/atualiza_livro" class="grey darken-3 white-text btn-small"
+                        style="margin-bottom: 4px;">Editar</a>
+                    <a href="{{livro.id}}/remover_livro" onclick="return confirm('Deseja remover esse livro?')"
+                        class="red lighten-1 white-text btn-small">Remover</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
