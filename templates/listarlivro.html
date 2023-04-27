@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Listar novo livro{% endblock %}
+{% block title %}Listar Novo Livro{% endblock %}
 
 {% block content %}
 
@@ -61,6 +61,11 @@
                 <button class="btn grey darken-3 white-text" type="submit" name="action">Adicionar
                     <i class="material-icons right">send</i>
                 </button>
+
+                <a class="right btn grey darken-3 white-text" href="{{url_for('listarlivro')}}">Limpar</a>
+               
+
+                 
 
             </fieldset>
 

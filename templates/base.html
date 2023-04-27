@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquivo de Livros - {% block title %}Home{% endblock %}</title>
+    <title>Booksboxd - {% block title %}Home{% endblock %}</title>
 </head>
 
 <body>
@@ -17,8 +17,8 @@
             <div class="container">
                 <a href="/" class="brand-logo" style="font-weight: bold;">Booksboxd</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="lista">Minha Lista</a></li>
-                    <li><a href="listarlivro">Adicionar Livro</a></li>
+                    <li><a href="{{url_for('lista')}}">Minha Lista</a></li>
+                    <li><a href="{{url_for('listarlivro')}}">Adicionar Livro</a></li>
                 </ul>
             </div>
         </div>
